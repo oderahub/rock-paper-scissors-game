@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">
+        ROCK<br />
+        PAPER<br />
+        SCISSORS<br />
+        LIZARD<br />
+        SPOCK
+      </div>
+      <div class="score-box">
+        <div class="score-label">SCORE</div>
+        <div class="score" id="score">0</div>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <div class="pentagon">
+        <svg viewBox="0 0 329 313" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill="none"
+            stroke="#000"
+            stroke-width="15"
+            d="M164.5 9.27L9.26 122.06l59.296 182.495h191.888l59.296-182.495L164.5 9.271z"
+            opacity=".2"
+          />
+        </svg>
+      </div>
+
+      <button class="choice-button scissors" aria-label="Choose Scissors">
+        <div class="button-inner">
+          <img
+            class="choice-icon"
+            viewBox="0 0 51 58"
+            src="images/icon-scissors.svg"
+            alt="Scissors icon"
+          />
+        </div>
+      </button>
+
+      <button class="choice-button paper" aria-label="Choose Paper">
+        <div class="button-inner">
+          <img
+            class="choice-icon"
+            viewBox="0 0 49 59"
+            src="images/icon-paper.svg"
+            alt="Paper icon"
+          />
+        </div>
+      </button>
+
+      <button class="choice-button rock" aria-label="Choose Rock">
+        <div class="button-inner">
+          <img class="choice-icon" viewBox="0 0 48 48" src="images/icon-rock.svg" alt="Rock icon" />
+        </div>
+      </button>
+
+      <button class="choice-button lizard" aria-label="Choose Lizard">
+        <div class="button-inner">
+          <img
+            class="choice-icon"
+            viewBox="0 0 51 58"
+            src="images/icon-lizard.svg"
+            alt="Lizard icon"
+          />
+        </div>
+      </button>
+
+      <button class="choice-button spock" aria-label="Choose Spock">
+        <div class="button-inner">
+          <img
+            class="choice-icon"
+            viewBox="0 0 45 59"
+            src="images/icon-spock.svg"
+            alt="Spock icon"
+          />
+        </div>
+      </button>
+    </div>
+
+    <button class="rules-button">RULES</button>
+
+    <div class="rules-modal" id="rulesModal">
+      <div class="rules-content">
+        <div class="rules-header">
+          <h2>RULES</h2>
+          <button class="close-button" aria-label="Close rules">×</button>
+        </div>
+        <img
+          src="images/image-rules-bonus.svg"
+          alt="Game rules diagram showing how each choice beats two others"
+          class="rules-image"
+        />
+      </div>
+    </div>
+
+    <div class="result-display" id="resultDisplay">
+      <div class="choices">
+        <div class="choice player">
+          <h2>YOU PICKED</h2>
+          <div class="choice-placeholder"></div>
+        </div>
+        <div class="result-text">
+          <h2 class="result-heading"></h2>
+          <button class="play-again">PLAY AGAIN</button>
+        </div>
+        <div class="choice computer">
+          <h2>THE HOUSE PICKED</h2>
+          <div class="choice-placeholder"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">Coded by <a href="#">Chidera</a>.</div>
+
+    <script src="script"></script>
+  </body>
+</html>
