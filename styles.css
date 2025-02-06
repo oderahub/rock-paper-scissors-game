@@ -38,7 +38,12 @@ body {
   padding: 20px;
   background: radial-gradient(circle at top, var(--background-from), var(--background-to));
 }
-
+h2 {
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 .header {
   border: 3px solid var(--header-outline);
   border-radius: 15px;
@@ -120,49 +125,42 @@ body {
 .paper {
   background: linear-gradient(to bottom, var(--paper-gradient-from), var(--paper-gradient-to));
   box-shadow: 0 5px var(--paper-gradient-to);
-  top: 0;
-  left: 0;
+  top: 25%;
+  left: 75%;
 }
 
 .scissors {
+  margin-top: 10px;
   background: linear-gradient(
     to bottom,
     var(--scissors-gradient-from),
     var(--scissors-gradient-to)
   );
   box-shadow: 0 5px var(--scissors-gradient-to);
-  top: 0;
-  right: 0;
+  top: -10%;
+  left: 35%;
 }
 
 .rock {
   background: linear-gradient(to bottom, var(--rock-gradient-from), var(--rock-gradient-to));
   box-shadow: 0 5px var(--rock-gradient-to);
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.rock:hover {
-  transform: translateX(-50%) scale(1.1);
 }
 
 .lizard {
   background: linear-gradient(to bottom, var(--lizard-gradient-from), var(--lizard-gradient-to));
   box-shadow: 0 5px var(--lizard-gradient-to);
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 .spock {
   background: linear-gradient(to bottom, var(--spock-gradient-from), var(--spock-gradient-to));
   box-shadow: 0 5px var(--spock-gradient-to);
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  top: 30%;
+  left: -10%;
 }
 
 .choice-icon {
@@ -265,4 +263,80 @@ body {
     width: 145px;
     height: 145px;
   }
+}
+
+/* .rules-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.rules-modal.active {
+  display: block; /* Show when active */
+*/
+
+/* .rules-modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+} */
+
+/* .result-display {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+} */
+
+.result-display.active {
+  display: block; /* Show when active */
+}
+
+.rules-modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.rules-modal .close-button {
+  position: absolute;
+  top: 10px;
+  font-size: 2.5rem;
+  color: gray;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.rules-modal.active {
+  display: block; /* Show when active */
+}
+
+.result-display {
+  display: none; /* Initially hidden */
+  text-align: center;
+  margin-top: 20px;
 }
