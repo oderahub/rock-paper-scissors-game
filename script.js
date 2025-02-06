@@ -25,11 +25,14 @@ const gameContainer = document.querySelector('.game-container');
 
 // Show Rules Modal
 rulesButton.addEventListener('click', () => {
+  resultDisplay.style.display = 'none';
+  gameContainer.style.display = 'none';
   rulesModal.style.display = 'block';
 });
 
 // Close Rules Modal
 closeButton.addEventListener('click', () => {
+  gameContainer.style.display = 'block';
   rulesModal.style.display = 'none';
 });
 
